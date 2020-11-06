@@ -7,15 +7,23 @@
 
     <title>{% if page.title %}{{ page.title }} &mdash; {% endif %}{{ config.site_name }}</title>
 
-    <link rel="shortcut icon" href="{{ base_url }}/img/favicon.ico">
-    <link rel="stylesheet" href="{{ base_url }}/css/alabaster.css" type="text/css">
-    <link rel="stylesheet" href="{{ base_url }}/css/alabaster-overrides.css" type="text/css">
+    <link rel="shortcut icon" href="{{ base_url }}img/favicon.ico">
+    <link rel="stylesheet" href="{{ base_url }}css/alabaster.css" type="text/css">
+    <link rel="stylesheet" href="{{ base_url }}css/alabaster-overrides.css" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
     {% for path in extra_css %}
       <link href="{{ path }}" rel="stylesheet">
     {% endfor %}
 
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+    <script
+			  src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			  integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+			  crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     {% block extrahead %}{% endblock %}
   {% endblock %}
